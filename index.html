@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/design.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+  </head>
+  <body>
+    <div class="row mx-auto flex flex-col">
+      <input class="input" type="text" id="display"/>
+    </div>
+    <div class="container mx-auto flex flex-col">
+      <div class="button-table">
+        <button class="button" id="outside-button" onclick="clearall()">AC</button>
+        <button class="button" id="outside-button" onclick="clearrecent()">C</button>
+        <button class="button" id="outside-button" >%</button>
+        <button class="button" id="outside-button" onclick="addToDisplay('/')">/</button>
+      </div>
+      <div class="button-table">
+        <button class="button" onclick="addToDisplay('7')">7</button>
+        <button class="button" onclick="addToDisplay('8')">8</button>
+        <button class="button" onclick="addToDisplay('9')">9</button>
+        <button class="button" id="outside-button" onclick="addToDisplay('*')">X</button>
+      </div>
+      <div class="button-table">
+        <button class="button" onclick="addToDisplay('4')">4</button>
+        <button class="button" onclick="addToDisplay('5')">5</button>
+        <button class="button" onclick="addToDisplay('6')">6</button>
+        <button class="button" id="outside-button" onclick="addToDisplay('-')">-</button>
+      </div>
+      <div class="button-table">
+        <button class="button" onclick="addToDisplay('1')">1</button>
+        <button class="button" onclick="addToDisplay('2')">2</button>
+        <button class="button" onclick="addToDisplay('3')">3</button>
+        <button class="button" id="outside-button" onclick="addToDisplay('+')">+</button>
+      </div>
+      <div class="button-table">
+        <button class="button" onclick="brackets()">()</button>
+        <button class="button" onclick="addToDisplay('0')">0</button>
+        <button class="button" onclick="addToDisplay('.')">.</button>
+        <button class="button" id="equal-to-button" onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script src="backend.js"></script>
+  </body>
+</html>
